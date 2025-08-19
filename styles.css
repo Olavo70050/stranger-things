@@ -1,0 +1,75 @@
+/* Aqui viria todo o CSS neon que mostrei no canvas (cores, layout, acessibilidade) */
+/* =============================
+margin: .2rem 0 1rem;
+color: var(--brand);
+text-shadow: 0 0 16px rgba(255,58,58,.75);
+}
+.lead { color: var(--muted); }
+.hero-card {
+background: radial-gradient(400px 250px at 50% 0%, rgba(255,45,85,.16), transparent),
+linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+border: 1px solid rgba(255,255,255,.08);
+border-radius: 1.2rem;
+padding: 1.2rem;
+}
+
+
+/* Sections */
+section { padding: 3.2rem 0; border-top: 1px solid rgba(255,255,255,.06); }
+h2 {
+font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+margin: .2rem 0 1rem;
+color: var(--neon-2);
+text-shadow: 0 0 10px rgba(74,168,255,.6);
+}
+p { margin: 0 0 1rem; }
+
+
+/* Cards */
+.grid { display: grid; gap: 1rem; }
+@media (min-width: 720px) { .grid.cols-3 { grid-template-columns: repeat(3, 1fr); } }
+.card {
+background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+border: 1px solid rgba(255,255,255,.08);
+border-radius: 1.1rem;
+padding: 1rem;
+position: relative;
+}
+.card h3 { margin-top: .2rem; font-size: 1.1rem; }
+.chip {
+display: inline-block;
+font-size: .8rem;
+letter-spacing: .03em;
+border: 1px dashed rgba(255,255,255,.25);
+padding: .25rem .5rem;
+border-radius: .5rem;
+color: #b7c5f7;
+}
+
+
+/* Gallery */
+.gallery { display: grid; gap: .6rem; grid-template-columns: repeat(2,1fr); }
+@media (min-width: 860px) { .gallery { grid-template-columns: repeat(4,1fr); } }
+.gallery img.ph {
+aspect-ratio: 4/3;
+background: conic-gradient(from 200deg, rgba(255,45,85,.25), rgba(74,168,255,.25));
+border: 1px solid rgba(255,255,255,.1);
+border-radius: .8rem;
+object-fit: cover;
+}
+
+
+/* Footer */
+footer { padding: 2rem 0; color: #9db0da; }
+
+
+/* Alto contraste */
+.alto-contraste {
+--bg: #000;
+--panel: #000;
+--text: #fff;
+--muted: #f4f4f4;
+--neon: #ffde59;
+--brand: #ffde59;
+--neon-2: #fff;
+}

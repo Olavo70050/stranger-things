@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Strange Things · Neon 80s</title>
+  <meta name="description" content="Site acessível inspirado no clima retrô de Stranger Things (anos 80).">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+  <header role="banner">
+    <div class="wrap" aria-label="Barra de navegação principal">
+      <div class="logo" aria-label="Logotipo em estilo neon">Strange Things</div>
+      <nav aria-label="Primária" class="nav-links">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#mundo">Mundo invertido</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="a11y-controls" aria-label="Ferramentas de acessibilidade">
+        <button class="btn btn-ghost" id="font-dec" aria-label="Diminuir fonte">A-</button>
+        <button class="btn btn-ghost" id="font-inc" aria-label="Aumentar fonte">A+</button>
+        <button class="btn btn-ghost" id="toggle-contrast" aria-pressed="false">Alto contraste</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section id="inicio" class="hero" aria-label="Seção de abertura">
+      <div class="wrap">
+        <div>
+          <div class="kicker">Boas‑vindas a</div>
+          <h1 class="headline">STRANGE THINGS</h1>
+          <p class="lead">Inspirado no clima retrô da década de 1980 e no mistério de uma cidade onde o normal e o sobrenatural se cruzam.</p>
+          <div class="cta">
+            <a class="btn btn-prim" href="#sobre" role="button">Quero conhecer!</a>
+            <span class="chip" aria-hidden="true">Neon 80s</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Destaques rápidos">
+          <h2 style="margin-top:0">Destaques</h2>
+          <ul>
+            <li>Atmosfera de suspense com estética neon.</li>
+            <li>Controles de zoom e alto contraste.</li>
+            <li>Layout responsivo com foco em leitura.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre" aria-label="O que é Strange Things?">
+      <div class="wrap">
+        <h2>O que é Strange Things?</h2>
+        <p>Uma aventura de ficção científica e terror ambientada no início dos anos 80. Um grupo de amigos encara fenômenos incomuns enquanto tenta desvendar segredos da própria cidade e de um lugar além da realidade.</p>
+      </div>
+    </section>
+
+    <section id="galeria" aria-label="Galeria temática">
+      <div class="wrap">
+        <h2>Galeria</h2>
+        <p class="muted">Pré-visualizações estilizadas (imagens fictícias).</p>
+        <div class="gallery">
+          <img src="img/poster.png" alt="Poster fictício neon Stranger Things" class="ph">
+          <img src="img/mapa.png" alt="Mapa fictício neon" class="ph">
+          <img src="img/fliperama.png" alt="Fliperama anos 80" class="ph">
+          <img src="img/lanterna.png" alt="Lanterna na névoa" class="ph">
+        </div>
+      </div>
+    </section>
+
+    <section id="mundo" aria-label="Mundo invertido">
+      <div class="wrap">
+        <h2>Mundo invertido</h2>
+        <div class="card">
+          <p>Ative o <strong>Alto contraste</strong> no topo para simular a atmosfera do outro lado: menos cor, mais foco e luminosidade intensa nas bordas. Combine com o zoom para uma leitura confortável.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" aria-label="Formulário de contato">
+      <div class="wrap">
+        <h2>Contato</h2>
+        <form class="card" aria-describedby="ajuda">
+          <p id="ajuda" class="muted">Campos meramente ilustrativos.</p>
+          <label for="nome">Nome</label><br>
+          <input id="nome" name="nome" type="text"><br>
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email"><br>
+          <label for="msg">Mensagem</label><br>
+          <textarea id="msg" name="mensagem" rows="4"></textarea><br>
+          <button class="btn btn-prim" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap">
+      <p>Projeto estudantil inspirado no clima da série. Sem fins comerciais.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
