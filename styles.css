@@ -1,75 +1,141 @@
-/* Aqui viria todo o CSS neon que mostrei no canvas (cores, layout, acessibilidade) */
-/* =============================
-margin: .2rem 0 1rem;
-color: var(--brand);
-text-shadow: 0 0 16px rgba(255,58,58,.75);
-}
-.lead { color: var(--muted); }
-.hero-card {
-background: radial-gradient(400px 250px at 50% 0%, rgba(255,45,85,.16), transparent),
-linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-border: 1px solid rgba(255,255,255,.08);
-border-radius: 1.2rem;
-padding: 1.2rem;
-}
-
-
-/* Sections */
-section { padding: 3.2rem 0; border-top: 1px solid rgba(255,255,255,.06); }
-h2 {
-font-size: clamp(1.4rem, 3.2vw, 2.2rem);
-margin: .2rem 0 1rem;
-color: var(--neon-2);
-text-shadow: 0 0 10px rgba(74,168,255,.6);
-}
-p { margin: 0 0 1rem; }
-
-
-/* Cards */
-.grid { display: grid; gap: 1rem; }
-@media (min-width: 720px) { .grid.cols-3 { grid-template-columns: repeat(3, 1fr); } }
-.card {
-background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-border: 1px solid rgba(255,255,255,.08);
-border-radius: 1.1rem;
-padding: 1rem;
-position: relative;
-}
-.card h3 { margin-top: .2rem; font-size: 1.1rem; }
-.chip {
-display: inline-block;
-font-size: .8rem;
-letter-spacing: .03em;
-border: 1px dashed rgba(255,255,255,.25);
-padding: .25rem .5rem;
-border-radius: .5rem;
-color: #b7c5f7;
-}
-
-
-/* Gallery */
-.gallery { display: grid; gap: .6rem; grid-template-columns: repeat(2,1fr); }
-@media (min-width: 860px) { .gallery { grid-template-columns: repeat(4,1fr); } }
-.gallery img.ph {
-aspect-ratio: 4/3;
-background: conic-gradient(from 200deg, rgba(255,45,85,.25), rgba(74,168,255,.25));
-border: 1px solid rgba(255,255,255,.1);
-border-radius: .8rem;
-object-fit: cover;
-}
-
-
-/* Footer */
-footer { padding: 2rem 0; color: #9db0da; }
-
-
-/* Alto contraste */
-.alto-contraste {
---bg: #000;
---panel: #000;
---text: #fff;
---muted: #f4f4f4;
---neon: #ffde59;
---brand: #ffde59;
---neon-2: #fff;
-}
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  header {
+    background: #111;
+    padding: 20px;
+    border-bottom: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  h1 {
+    font-size: 3em;
+    color: red;
+    text-shadow: 0 0 10px red;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #ff2d55;
+  }
+  
+  .a11y-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .a11y-controls .btn {
+    padding: 6px 10px;
+    background: #222;
+    border: 1px solid red;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  section {
+    padding: 30px 15px;
+  }
+  
+  .galeria {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .galeria img {
+    width: 200px;
+    border: 3px solid red;
+    border-radius: 6px;
+  }
+  
+  /* Grid de 3 colunas x 2 linhas para o elenco */
+  .grid-elenco {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .grid-elenco .card img {
+    width: 100%;
+    border: 3px solid red;
+    border-radius: 8px;
+  }
+  
+  .grid-elenco .card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff2d55;
+    text-shadow: 0 0 5px #ff2d55;
+  }
+  
+  .card {
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  input, textarea {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid red;
+    background: #000;
+    color: #fff;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: red;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  footer {
+    background: #111;
+    padding: 20px;
+    margin-top: 30px;
+    color: #aaa;
+  }
+  
+  /* Modo Alto Contraste */
+  .alto-contraste {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+  
+  .alto-contraste header,
+  .alto-contraste footer,
+  .alto-contraste .card {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+  }
+  
+  .alto-contraste nav a {
+    color: #000 !important;
+  }
+  
