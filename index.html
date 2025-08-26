@@ -1,107 +1,91 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> 
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Strange Things · Neon 80s</title>
-  <meta name="description" content="Site acessível inspirado no clima retrô de Stranger Things (anos 80).">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stranger Things - Fã Site</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
-  <header role="banner">
-    <div class="wrap" aria-label="Barra de navegação principal">
-      <div class="logo" aria-label="Logotipo em estilo neon">Strange Things</div>
-      <nav aria-label="Primária" class="nav-links">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#mundo">Mundo invertido</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <div class="a11y-controls" aria-label="Ferramentas de acessibilidade">
-        <button class="btn btn-ghost" id="font-dec" aria-label="Diminuir fonte">A-</button>
-        <button class="btn btn-ghost" id="font-inc" aria-label="Aumentar fonte">A+</button>
-        <button class="btn btn-ghost" id="toggle-contrast" aria-pressed="false">Alto contraste</button>
-      </div>
+  <header>
+    <h1>Stranger Things</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#elenco">Elenco</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <!-- Controles de acessibilidade -->
+    <div class="a11y-controls">
+      <button class="btn" id="font-dec">A-</button>
+      <button class="btn" id="font-inc">A+</button>
+      <button class="btn" id="toggle-contrast" aria-pressed="false">Alto contraste</button>
     </div>
   </header>
 
-  <main id="conteudo" tabindex="-1">
-    <section id="inicio" class="hero" aria-label="Seção de abertura">
-      <div class="wrap">
-        <div>
-          <div class="kicker">Boas‑vindas a</div>
-          <h1 class="headline">STRANGE THINGS</h1>
-          <p class="lead">Inspirado no clima retrô da década de 1980 e no mistério de uma cidade onde o normal e o sobrenatural se cruzam.</p>
-          <div class="cta">
-            <a class="btn btn-prim" href="#sobre" role="button">Quero conhecer!</a>
-            <span class="chip" aria-hidden="true">Neon 80s</span>
-          </div>
-        </div>
-        <aside class="hero-card" aria-label="Destaques rápidos">
-          <h2 style="margin-top:0">Destaques</h2>
-          <ul>
-            <li>Atmosfera de suspense com estética neon.</li>
-            <li>Controles de zoom e alto contraste.</li>
-            <li>Layout responsivo com foco em leitura.</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p><strong>Stranger Things</strong> é uma série que mistura mistério, ficção científica e nostalgia dos anos 80. Ambientada na cidade de Hawkins, ela acompanha um grupo de amigos que enfrenta desaparecimentos, experimentos secretos e uma dimensão sombria conhecida como <em>Mundo Invertido</em>.</p>
+    <p>Com uma atmosfera envolvente, referências culturais da década de 1980 e personagens marcantes, Stranger Things conquistou fãs no mundo inteiro. Uma história sobre amizade, coragem e a luta contra forças além da compreensão humana.</p>
+    <p><strong>Assista e mergulhe nessa aventura retrô repleta de suspense e emoção!</strong></p>
+  </section>
 
-    <section id="sobre" aria-label="O que é Strange Things?">
-      <div class="wrap">
-        <h2>O que é Strange Things?</h2>
-        <p>Uma aventura de ficção científica e terror ambientada no início dos anos 80. Um grupo de amigos encara fenômenos incomuns enquanto tenta desvendar segredos da própria cidade e de um lugar além da realidade.</p>
-      </div>
-    </section>
-
-    <section id="galeria" aria-label="Galeria temática">
-      <div class="wrap">
-        <h2>Galeria</h2>
-        <p class="muted">Pré-visualizações estilizadas (imagens fictícias).</p>
-        <div class="gallery">
-          <img src="img/poster.png" alt="Poster fictício neon Stranger Things" class="ph">
-          <img src="img/mapa.png" alt="Mapa fictício neon" class="ph">
-          <img src="img/fliperama.png" alt="Fliperama anos 80" class="ph">
-          <img src="img/lanterna.png" alt="Lanterna na névoa" class="ph">
-        </div>
-      </div>
-    </section>
-
-    <section id="mundo" aria-label="Mundo invertido">
-      <div class="wrap">
-        <h2>Mundo invertido</h2>
-        <div class="card">
-          <p>Ative o <strong>Alto contraste</strong> no topo para simular a atmosfera do outro lado: menos cor, mais foco e luminosidade intensa nas bordas. Combine com o zoom para uma leitura confortável.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" aria-label="Formulário de contato">
-      <div class="wrap">
-        <h2>Contato</h2>
-        <form class="card" aria-describedby="ajuda">
-          <p id="ajuda" class="muted">Campos meramente ilustrativos.</p>
-          <label for="nome">Nome</label><br>
-          <input id="nome" name="nome" type="text"><br>
-          <label for="email">Email</label><br>
-          <input id="email" name="email" type="email"><br>
-          <label for="msg">Mensagem</label><br>
-          <textarea id="msg" name="mensagem" rows="4"></textarea><br>
-          <button class="btn btn-prim" type="submit">Enviar</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="wrap">
-      <p>Projeto estudantil inspirado no clima da série. Sem fins comerciais.</p>
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <div class="galeria">
+      <img src="img/poster.png" alt="Poster">
+      <img src="img/mapa.png" alt="Mapa">
+      <img src="img/fliperama.png" alt="Fliperama">
+      <img src="img/lanterna.png" alt="Lanterna">
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="elenco">
+    <h2>Elenco Principal</h2>
+    <div class="grid-elenco">
+      <div class="card">
+        <img src="img/eleven.jpg" alt="Eleven">
+        <p>Eleven</p>
+      </div>
+      <div class="card">
+        <img src="img/mike.jpg" alt="Mike">
+        <p>Mike</p>
+      </div>
+      <div class="card">
+        <img src="img/dustin.jpg" alt="Dustin">
+        <p>Dustin</p>
+      </div>
+      <div class="card">
+        <img src="img/lucas.jpg" alt="Lucas">
+        <p>Lucas</p>
+      </div>
+      <div class="card">
+        <img src="img/will.jpg" alt="Will">
+        <p>Will</p>
+      </div>
+      <div class="card">
+        <img src="img/max.jpg" alt="Max">
+        <p>Max</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form class="card">
+      <label for="nome">Nome</label>
+      <input id="nome" type="text">
+      <label for="email">Email</label>
+      <input id="email" type="email">
+      <label for="msg">Mensagem</label>
+      <textarea id="msg"></textarea>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Fã site inspirado em Stranger Things - Anos 80</p>
+  </footer>
 </body>
 </html>
